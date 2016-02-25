@@ -1,0 +1,96 @@
+# scripts
+fresh-options --ref=a38d020b7c78470cd59382245933e0ef62db5712
+  fresh freshshell/fresh bin/fresh --bin
+  fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
+fresh-options
+
+fresh-options --bin --ref=f5403069d33dc0887267278080d74c2e6a197441
+  fresh DanielVartanov/willgit bin/git-publish-branch
+  fresh DanielVartanov/willgit bin/git-rank-contributors
+  fresh DanielVartanov/willgit bin/git-show-merges
+  fresh DanielVartanov/willgit bin/git-wt-add
+  fresh DanielVartanov/willgit bin/git-wtf
+fresh-options
+
+fresh-options --bin
+  fresh cypher/dotfiles bin/git-up --ref=2121437a9a325044fda0b73de0eaa5dc6e7dac73
+  fresh clvv/fasd fasd --ref=90b531a5daaa545c74c7d98974b54cbdb92659fc
+fresh-options
+
+fresh-options --bin --ref=8c53f998bf6c7e8d6f3e0ab0755ba8b05264344d
+  fresh twe4ked/dotfiles bin/git-author # required by prompt
+  fresh twe4ked/dotfiles bin/add-keys # pulls a users public keys from GitHub
+fresh-options
+
+fresh-options --bin --ref=db067db498736b13db30ec9ebb7c2bfac9ea56d5
+  fresh mikker/dotfiles bin/colortest.sh # Print terminal colors.
+  fresh mikker/dotfiles bin/256colors.pl # Print terminal colors.
+fresh-options
+
+fresh-options --bin
+  # Encrypt using github pubkeys.
+  fresh twe4ked/catacomb bin/catacomb --ref=70a483638be8779f607311c6417b6d6c35e2ee6b
+  # Print terminal colors.
+  fresh holeyshoe/scripts term-colors.sh --ref=f90c0ed556142734eac19123019165410e75e4ce
+  fresh git://git.kitenet.net/moreutils vipe # insert a text editor into a pipe
+  fresh mangrep
+  fresh junegunn/fzf bin/fzf-tmux --ref=85751966e9d7628893796e3eac7e9051108a144b
+  fresh hsreset.sh
+  fresh private_startup
+fresh-options
+
+fresh-options --bin --ref=96e3c09f018a2065c1442b92f007d631fba1e67f
+  fresh rtomayko/dotfiles bin/trunc
+  fresh rtomayko/dotfiles bin/ppeek
+  fresh rtomayko/dotfiles bin/ports
+  fresh rtomayko/dotfiles bin/git-prune-merged-branches
+  fresh rtomayko/dotfiles bin/git-outgoing
+  fresh rtomayko/dotfiles bin/git-incoming
+  fresh rtomayko/dotfiles bin/git-cut-branch
+  fresh rtomayko/dotfiles bin/git-conflicts
+  fresh rtomayko/dotfiles bin/git-big-object-report
+  fresh rtomayko/dotfiles bin/man.cx # External man pages.
+fresh-options
+
+# zsh
+fresh ajsalminen/zaw . --file=~/opt/zsh/zaw/ # whole repository
+fresh ajsalminen/scm_breeze . --file=~/opt/scm_breeze/ # whole repository
+
+# whole repository
+fresh zsh-users/zsh-syntax-highlighting .  \
+  --file=~/opt/zsh/zsh-syntax-highlighting/ \
+  --ref=7044c1986e2f6b15eec27a03651207fccb0a2fbe
+
+fresh-options  --file=~/.zshrc
+  fresh go-command.plugin.zsh
+  fresh config.zsh
+fresh-options
+
+fresh-options  --file=~/.zshrc --ref=8c53f998bf6c7e8d6f3e0ab0755ba8b05264344d
+  fresh twe4ked/dotfiles shell/zsh/completion.zsh
+  fresh twe4ked/dotfiles shell/zsh/prompt.zsh
+fresh-options
+
+# terminal titles
+fresh robbyrussell/oh-my-zsh lib/termsupport.zsh --file=~/.zshrc \
+  --ref=bd6dbd1d9b1fc8a523aaf588492eb3ed4113b49d
+
+fresh-options  --file=~/.zshrc --ref=85751966e9d7628893796e3eac7e9051108a144b
+  fresh junegunn/fzf shell/key-bindings.zsh
+  fresh junegunn/fzf shell/completion.zsh
+fresh-options
+
+fresh-options  --file=~/.zshrc
+  fresh ajsalminen/outrunner outrunner/outrunner.plugin.zsh
+  fresh .zshrc
+  fresh ergoemacs.zsh
+  fresh ergoemacs-zaw.zsh
+  fresh ajsalminen/zaw-src-apt zaw-apt.plugin.zsh
+  fresh bindkey.zsh
+  fresh debian-aliases.sh
+fresh-options
+
+# Config that should work in all shells.
+fresh .commonrc --file
+
+fresh .xsession --file

@@ -1,0 +1,6 @@
+#!/bin/sh
+for p in $(manpath | tr ":" " ");
+do
+    echo $p
+    zgrep -r 'copy' $p
+done
