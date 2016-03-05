@@ -1,5 +1,6 @@
 #!/bin/sh
-export PATH=$PATH:~/.cabal/bin:~/opt/fasd/
+[ -r /etc/profile ] && source /etc/profile
+
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/neo2qwerty $DISPLAY
 # Reverse buttons
 xmodmap -e "pointer = 3 2 1"

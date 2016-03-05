@@ -94,6 +94,7 @@ fresh-options
 
 # Config that should work in all shells.
 fresh .commonrc --file
+fresh .profile --file
 
 fresh .xsession --file
 

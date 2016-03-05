@@ -244,4 +244,7 @@ function cli-fu() {
 curl "http://www.commandlinefu.com/commands/matching/$(echo "$@" | sed 's/ /-/g')/$(echo -n $@ | base64)/plaintext" | less
 }
 
+if [ -e /home/anttis/.nix-profile/etc/profile.d/nix.sh ]; then . ~/.nix-profile/etc/profile.d/nix.sh; fi
+
 ansaconv ~/tmp/sixteencolors-extracted/$(shuf -n 1  ~/tmp/sixteencolors-extracted/list.txt)
+
