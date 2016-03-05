@@ -97,6 +97,7 @@ fresh .commonrc --file
 fresh .profile --file
 
 fresh .xsession --file
+fresh .zprofile --file
 
 # cheat sheets for cheat
 fresh pkrumins/bash-redirections-cheat-sheet bash-redirections-cheat-sheet.txt --file=~/.cheat/external/bash-redirections --ref=6d23d2f5aed6b9b1d806d135aa1a7eb00a8c7290
