@@ -42,6 +42,27 @@ list_keybinds () {
 	bindkey | grep --color=always "$*" --color=never | awk -F " " '{ printf "\033[1;36m%15s  \033[2;37m=>\033[0m  %-8s\n",$1,$2}'
 }
 
+# Just an idea that needs refining for now.
+alias list_coreutils='dpkg -L coreutils | egrep '\.gz' | xargs -L1 zfgrep -A1 'SH NAME' | sort -u'
+alias list_util_linux='dpkg -L util-linux | egrep '\.gz' | xargs -L1 zfgrep -A1 'SH NAME' | sort -u'
+
+
+cheat() {
+  command cheat $@ | less
+}
+
+
+vman() {
+# It's shameless stolen from <http://www.vim.org/tips/tip.php?tip_id=167>
+#f5# Use \kbd{vim} as your manpage reader
+    emulate -L zsh
+    if (( ${#argv} == 0 )); then
+        printf 'usage: vman <topic>\n'
+        return 1
+    fi
+    man "$@" | col -b | vim -X -R -c "set ft=man nomod nolist" -
+}
+
 
 # Always match files first and command names only if no files match.
 compdef '_files || _command_names' -command-

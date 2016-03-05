@@ -4,6 +4,7 @@ SUDO_EDITOR=emacsclient
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export SURFRAW_text_browser=$(which links)
 export SURFRAW_graphical=no
+export CHEATPATH="$CHEATPATH:$HOME/.cheat/external"
 
 source ~/.fresh/build/shell.sh
 
