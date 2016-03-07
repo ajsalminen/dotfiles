@@ -19,10 +19,12 @@ urxvt &
 nm-applet &
 #terminator -x selfspy &
 keynav &
-~/.cabal/bin/xmonad
-
-
 
 # Disable touchpad on Thinkpad (from https://github.com/soleblaze/dotfiles/blob/master/xconfigs/xinitrc)
 touchpad=$(xinput | grep "SynPS/2 Synaptics TouchPad" | sed 's/.*id=\([0-9]*\).*/\1/')
 xinput --disable "$touchpad"
+
+~/.cabal/bin/xmonad
+
+
+
