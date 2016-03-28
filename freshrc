@@ -106,3 +106,7 @@ fresh pkrumins/awk-cheat-sheet awk.cheat.sheet.txt --file=~/.cheat/external/awk_
 fresh pkrumins/sed-cheat-sheet sed.stream.editor.cheat.sheet.txt --file=~/.cheat/external/sed_table --ref=652669838e051920266f363ac882eaadb2e55cfe
 
 #fresh thoughtbot/dotfiles zsh/completion/_ag --file=completion/_ag
+
+# emacs
+fresh ajsalminen/dotfiles-emacs split_config --file=~/.emacs.d/split_config/
+fresh ajsalminen/dotfiles-emacs init.el --file=~/.emacs.d/init.el
