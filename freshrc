@@ -108,5 +108,5 @@ fresh pkrumins/sed-cheat-sheet sed.stream.editor.cheat.sheet.txt --file=~/.cheat
 #fresh thoughtbot/dotfiles zsh/completion/_ag --file=completion/_ag
 
 # emacs
-fresh ajsalminen/dotfiles-emacs split_config --file=~/.emacs.d/split_config/
-fresh ajsalminen/dotfiles-emacs init.el --file=~/.emacs.d/init.el
+fresh  emacs/split_config --file=~/.emacs.d/split_config/
+fresh  emacs/init.el --file=~/.emacs.d/init.el
