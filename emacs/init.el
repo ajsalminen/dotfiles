@@ -70,6 +70,7 @@
 (load-user-file "split_config/geben.el")
 (load-user-file "split_config/compilation.el")
 (load-user-file "split_config/mail.el")
+(load-user-file "split_config/ediff.el")
 (load-user-file "split_config/keybinds.el")
 
 ;; (require 'eclim)
