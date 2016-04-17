@@ -1,6 +1,6 @@
 #!/bin/sh
 [ -r /etc/profile ] && source /etc/profile
-
+export PATH=$PATH:~/.cabal/bin
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/neo2qwerty $DISPLAY
 # Reverse buttons
 xmodmap -e "pointer = 3 2 1"
@@ -25,6 +25,3 @@ touchpad=$(xinput | grep "SynPS/2 Synaptics TouchPad" | sed 's/.*id=\([0-9]*\).*
 xinput --disable "$touchpad"
 
 ~/.cabal/bin/xmonad
-
-
-
