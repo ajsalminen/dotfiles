@@ -1,6 +1,8 @@
 #!/bin/sh
 [ -r /etc/profile ] && source /etc/profile
 export PATH=$PATH:~/.cabal/bin
+# This can help with java GUI programs.
+export _JAVA_AWT_WM_NONREPARENTING=1
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/neo2qwerty $DISPLAY
 # Reverse buttons
 xmodmap -e "pointer = 3 2 1"
