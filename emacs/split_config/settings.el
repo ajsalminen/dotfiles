@@ -4,6 +4,7 @@
 (setq browse-url-generic-program "google-chrome")
 (setq browse-url-browser-function 'browse-url-generic)
 (setq browse-url-new-window-flag t)
+(setq browse-url-generic-args '("--new-window"))
 
 (setq-default global-font-lock-mode nil)
 
