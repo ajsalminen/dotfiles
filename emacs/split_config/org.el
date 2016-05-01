@@ -50,6 +50,10 @@ entry
 (setq org-refile-targets (glimpse-list-to-alist org-refile-targets-filelist '(:level . 1))))
 (refresh-org-refile-targets)
 
+;; Allow new nodes and use filename for targets.
+(setq org-refile-allow-creating-parent-nodes 'confirm)
+(setq org-refile-use-outline-path 'file)
+
 (server-start)
 (require 'org-protocol)
 
