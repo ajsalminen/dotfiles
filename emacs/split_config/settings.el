@@ -75,3 +75,5 @@
 
 (mapcar (lambda (elt) (add-to-list 'yes-or-no-p-history elt))
         '("no" "yes"))
+
+(setq uniquify-buffer-name-style 'post-forward)
