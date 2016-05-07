@@ -53,6 +53,8 @@ entry
 ;; Allow new nodes and use filename for targets.
 (setq org-refile-allow-creating-parent-nodes 'confirm)
 (setq org-refile-use-outline-path 'file)
+;; For the filename targets to work with also headings inside  this is required.
+(setq org-outline-path-complete-in-steps nil)
 
 (server-start)
 (require 'org-protocol)
