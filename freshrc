@@ -53,6 +53,10 @@ fresh-options --bin --ref=96e3c09f018a2065c1442b92f007d631fba1e67f
   fresh rtomayko/dotfiles bin/man.cx # External man pages.
 fresh-options
 
+# Terminal configuration.
+fresh CyberShadow/urxvt-perls keyboard-select --file=~/.urxvt/ext/keyboard-select --ref=809a39bdb261e22432b792294c2f6deb53f58d35
+fresh .Xresources --file
+
 # zsh
 fresh ajsalminen/zaw . --file=~/opt/zsh/zaw/ # whole repository
 fresh ajsalminen/scm_breeze . --file=~/opt/scm_breeze/ # whole repository

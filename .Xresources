@@ -1,0 +1,56 @@
+emacs.font: CosmicSansNeueMono-13
+
+*customization: -color
+XTerm*termName:  xterm-256color
+!XTerm*termName:  xterm-256color
+*faceName:  Source Code Pro:pixelsize=12
+!xterm*foreground: rgb:92/92/92
+!xterm*background: rgb:28/28/28
+xterm*dynamicColors: true
+urxvt*dynamicColors: on
+#include "base16-monokai.dark.256.xresources"
+
+
+! Selections with keyboard
+URxvt.perl-ext-common: ...,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+! Make urxvt keys like xterm/terminator
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Left: \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Delete: \033[3;5~
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+urxvt*saveLines: 200000
+
+! no keycap picture insert mode (ctrl shift)
+URxvt.iso14755: true
+URxvt.iso14755_52: false
+
+! numpad
+URxvt.keysym.KP_Add:    +
+URxvt.keysym.KP_Subtract: -
+URxvt.keysym.KP_Multiply: *
+URxvt.keysym.KP_Divide  : /
+URxvt.keysym.KP_Decimal : .
+URxvt.keysym.KP_Separator : ,
+URxvt.keysym.KP_1:      1
+URxvt.keysym.KP_2:      2
+URxvt.keysym.KP_3:      3
+URxvt.keysym.KP_4:      4
+URxvt.keysym.KP_5:      5
+URxvt.keysym.KP_6:      6
+URxvt.keysym.KP_7:      7
+URxvt.keysym.KP_8:      8
+URxvt.keysym.KP_9:      9
+URxvt.keysym.KP_0:      0
