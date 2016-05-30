@@ -43,6 +43,10 @@
                   (point))))
     (comment-or-uncomment-region start end)))
 
+(defun find-daily-todo ()
+  (interactive)
+  (find-file (concat "~/Documents/org/daily-todo/daily-todo-" (format-time-string "%Y-%m-%d") ".org")))
+
 ;; http://stackoverflow.com/a/25212377 (originally by Magnars)
 (defun rename-current-buffer-file ()
   "Renames current buffer and file it is visiting."
