@@ -64,14 +64,14 @@ alias md='mkdir -p'
 cat_url_or_file() {
 if [[ $1 == http://* || $1 == https://* ]]
 then
-curl $1
+curl -H "Accept: application/json" $1
 else
 cat $1
 fi
 }
 
 pretty_print_json() {
-cat_url_or_file $1 | python -mjson.tool | pygmentize -l javascript | less
+cat_url_or_file $1 | python -mjson.tool | pygmentize -l javascript | less -Xfr
 }
 
 alias ppj=pretty_print_json
@@ -248,6 +248,14 @@ function drupal-patch-url() {
 patchname=$(echo "$1" | grep --color=never -Po '([^/]*)$')
 git checkout -b "$patchname"
 curl $1 | patch -p1
+}
+
+# Add some extra keys to ssh-agent when ssh-add is called.
+function ssh-add() {
+command ssh-add
+for i in $(find ~/.ssh/additional_keys/ -not -name '*.pub' -type f)
+do command ssh-add $i
+done
 }
 
 ansaconv ~/tmp/sixteencolors-extracted/$(shuf -n 1  ~/tmp/sixteencolors-extracted/list.txt)
