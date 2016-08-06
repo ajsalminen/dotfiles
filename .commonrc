@@ -97,7 +97,7 @@ ANSIBLE_HOST_KEY_CHECKING=false
 vagrant_top=$(find-up Vagrantfile)
 
 playbook=$(grep 'ansible.playbook' ${vagrant_top}Vagrantfile | sed -e 's/^.*"\(.*\)".*$/\1/')
-ansible-playbook-debugger -i ${vagrant_top}.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory -s --u vagrant $playbook --private-key=/home/anttis/.vagrant.d/insecure_private_key "$@"
+ansible-playbook -i ${vagrant_top}.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory -s --u vagrant $playbook --private-key=/home/anttis/.vagrant.d/insecure_private_key "$@"
 }
 
 alias va=ansible_vagrant_run
@@ -158,7 +158,7 @@ phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme $
 alias pcd=php_drupalcs
 
 # asdz all probably not needed from fasd and free to reuse, f is useful.
-source /etc/profile.d/ansible.sh
+#source /etc/profile.d/ansible.sh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -206,16 +206,16 @@ timeout 1 cat $decrypted > /dev/null # One more attempted read to make it exit
 
 }
 
-vagrant(){
-ansible_gpg_socat $0 $@
-}
-ansible-playbook(){
-ansible_gpg_socat $0 $@
-}
+# vagrant(){
+# ansible_gpg_socat $0 $@
+# }
+# ansible-playbook(){
+# ansible_gpg_socat $0 $@
+# }
 
-ansible-playbook-debugger(){
-ansible_gpg_socat $0 $@
-}
+# ansible-playbook-debugger(){
+# ansible_gpg_socat $0 $@
+# }
 
 
 # Because booting hangs if a VM is running.
@@ -256,6 +256,10 @@ command ssh-add
 for i in $(find ~/.ssh/additional_keys/ -not -name '*.pub' -type f)
 do command ssh-add $i
 done
+}
+
+function install-deb() {
+dpkg -I $1 | grep Depends: | sed -r 's/(^ Depends: )|(\([^\)]+\))|(\| [^ ]+)|,//g' | xargs apt-get install
 }
 
 ansaconv ~/tmp/sixteencolors-extracted/$(shuf -n 1  ~/tmp/sixteencolors-extracted/list.txt)
