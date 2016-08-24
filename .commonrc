@@ -137,6 +137,7 @@ alias cnf=/usr/lib/command-not-found
 
 alias howdoi='howdoi --all --num-answers 2'
 
+
 # page only when needed, set term to truncate lines for minified code etc.
 # default to insensitive matches and include a global agignore for minified exts.
 # Some info http://unix.stackexchange.com/questions/109211/preserving-color-output-with-cut
@@ -238,6 +239,21 @@ function fingerprints() {
   while read l; do
     [[ -n $l && ${l###} = $l ]] && ssh-keygen -l -f /dev/stdin <<<$l
   done < $file
+}
+
+# https://gist.github.com/janmoesen/1156154
+# Sort du's output but use human-readable units.
+function duh {
+	du -sk "$@" | sort -n;
+	du -sk "$@" | sort -n | while read size fname; do
+		for unit in KiB MiB GiB TiB PiB EiB ZiB YiB; do
+			if [ "$size" -lt 1024 ]; then
+				echo -e "${size}${unit}\t${fname}";
+				break;
+			fi;
+			size=$((size/1024));
+		done;
+	done;
 }
 
 function cli-fu() {
