@@ -67,8 +67,8 @@ fresh zsh-users/zsh-syntax-highlighting .  \
   --ref=7044c1986e2f6b15eec27a03651207fccb0a2fbe
 
 fresh-options  --file=~/.zshrc
-  fresh go-command.plugin.zsh
-  fresh config.zsh
+  fresh shell/zsh/go-command.plugin.zsh
+  fresh shell/zsh/config.zsh
 fresh-options
 
 fresh-options  --file=~/.zshrc --ref=8c53f998bf6c7e8d6f3e0ab0755ba8b05264344d
@@ -87,13 +87,13 @@ fresh-options
 
 fresh-options  --file=~/.zshrc
   fresh ajsalminen/outrunner outrunner/outrunner.plugin.zsh
-  fresh .zshrc
-  fresh ergoemacs.zsh
-  fresh ergoemacs-zaw.zsh
+  fresh shell/zsh/.zshrc
+  fresh shell/zsh/ergoemacs.zsh
+  fresh shell/zsh/ergoemacs-zaw.zsh
   fresh ajsalminen/zaw-src-apt zaw-apt.plugin.zsh
-  fresh bindkey.zsh
-  fresh debian-aliases.sh
-  fresh aliases.sh
+  fresh shell/zsh/bindkey.zsh
+  fresh shell/debian-aliases.sh
+  fresh shell/aliases.sh
 fresh-options
 
 # Config that should work in all shells.
