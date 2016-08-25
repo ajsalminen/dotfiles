@@ -33,10 +33,10 @@ fresh-options --bin
   # Print terminal colors.
   fresh holeyshoe/scripts term-colors.sh --ref=f90c0ed556142734eac19123019165410e75e4ce
   fresh git://git.kitenet.net/moreutils vipe # insert a text editor into a pipe
-  fresh mangrep
+  fresh bin/mangrep
   fresh https://gist.github.com/3cba3ff196147ad42bac.git mangle.sh --ref=df2ebeab8ad79c87a0f1a0de45c256c6821abf22
   fresh junegunn/fzf bin/fzf-tmux --ref=85751966e9d7628893796e3eac7e9051108a144b
-  fresh hsreset.sh
+  fresh bin/hsreset.sh
   fresh private_startup
 fresh-options
 

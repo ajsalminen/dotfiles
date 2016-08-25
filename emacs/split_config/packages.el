@@ -74,7 +74,7 @@
         color-identifiers-mode
         gtags ;; remove once https://github.com/arnested/drupal-mode/issues/67 is fixed.
         helm-recoll
-        hide-cmnt
+        ;;hide-cmnt
         ))
 ;; Needed by remove-if
 (require 'cl)
