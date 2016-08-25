@@ -93,11 +93,12 @@ fresh-options  --file=~/.zshrc
   fresh ajsalminen/zaw-src-apt zaw-apt.plugin.zsh
   fresh shell/zsh/bindkey.zsh
   fresh shell/debian-aliases.sh
+  fresh shell/aliases/\*
   fresh shell/aliases.sh
 fresh-options
 
 # Config that should work in all shells.
-fresh .commonrc --file
+fresh shell/.commonrc --file
 fresh .profile --file
 
 fresh .xsession --file
