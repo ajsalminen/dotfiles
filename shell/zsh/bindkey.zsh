@@ -21,3 +21,7 @@ bindkey '\e[B' down-line-or-beginning-search
 bindkey '^T' fzf-file-widget
 bindkey '\ec' fzf-cd-widget
 bindkey '^R' fzf-history-widget
+
+# ztanesh dirstack binds
+bindkey \^I  insert-cycledleft
+bindkey \^N  insert-cycledright
