@@ -23,5 +23,5 @@ bindkey '\ec' fzf-cd-widget
 bindkey '^R' fzf-history-widget
 
 # ztanesh dirstack binds
-bindkey \^I  insert-cycledleft
-bindkey \^N  insert-cycledright
+bindkey '^[i'  insert-cycledleft
+bindkey '^[n'  insert-cycledright

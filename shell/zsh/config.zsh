@@ -6,13 +6,6 @@ bindkey "^[q" fasd-complete
 bindkey "^[w" fasd-complete-f
 bindkey "^[t" fasd-complete-d
 
-
-# from https://github.com/miohtama/ztanesh
-eval "insert-cycledleft () { zle push-line; LBUFFER='pushd -q +1'; zle accept-line }"
-zle -N insert-cycledleft
-eval "insert-cycledright () { zle push-line; LBUFFER='pushd -q -0'; zle accept-line }"
-zle -N insert-cycledright
-
 # Not using autocd as go-command handles it.
 # setopt AUTO_CD
 # Don't overwrite, append!
