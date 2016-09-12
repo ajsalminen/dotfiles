@@ -13,6 +13,7 @@ fresh-options --bin --ref=f5403069d33dc0887267278080d74c2e6a197441
 fresh-options
 
 fresh-options --bin
+  # "git pull" with better output.
   fresh cypher/dotfiles bin/git-up --ref=2121437a9a325044fda0b73de0eaa5dc6e7dac73
   # Highlight something in a diff.
   fresh cypher/dotfiles bin/diff-highlight --ref=1529bf4c1441d844d94a14595dc2d739a5f4fa05
@@ -39,6 +40,7 @@ fresh-options --bin
   fresh holeyshoe/scripts term-colors.sh --ref=f90c0ed556142734eac19123019165410e75e4ce
   fresh git://git.kitenet.net/moreutils vipe # insert a text editor into a pipe
   fresh bin/mangrep
+  # grep from man pages.
   fresh https://gist.github.com/3cba3ff196147ad42bac.git mangle.sh --ref=df2ebeab8ad79c87a0f1a0de45c256c6821abf22
   fresh junegunn/fzf bin/fzf-tmux --ref=85751966e9d7628893796e3eac7e9051108a144b
   fresh bin/hsreset.sh
@@ -99,15 +101,14 @@ fresh-options  --file=~/.zshrc
   fresh ajsalminen/zaw-src-apt zaw-apt.plugin.zsh
   # fresh miohtama/ztanesh zsh-scripts/rc/85-stack-cd
   fresh shell/zsh/bindkey.zsh
-  fresh shell/debian/apt-history.sh
-  fresh shell/wttrin.sh
 # aliases
-  fresh shell/debian/apt.sh
   fresh shell/aliases/\*
   # "cp" with progress using rsync.
   fresh miohtama/ztanesh zsh-scripts/plugins/cp/cp.plugin.zsh --ref=e8c502535650fd1595645a5ccfe3cb4ce1919549
   # urldecode/encode, escape
   fresh miohtama/ztanesh zsh-scripts/plugins/urltools/urltools.plugin.zsh --ref=e8c502535650fd1595645a5ccfe3cb4ce1919549
+# functions
+  fresh shell/functions/\*
 fresh-options
 
 # Config that should work in all shells.
