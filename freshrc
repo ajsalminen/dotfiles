@@ -5,10 +5,15 @@ fresh-options --ref=a38d020b7c78470cd59382245933e0ef62db5712
 fresh-options
 
 fresh-options --bin --ref=f5403069d33dc0887267278080d74c2e6a197441
+  # Publishes a branch in a remote repo while setting up tracking.
   fresh DanielVartanov/willgit bin/git-publish-branch
+  # Ranks contributors in git log by the size of the diffs they have contributed.
   fresh DanielVartanov/willgit bin/git-rank-contributors
+  # Shows which topic branches have been merged to current.
   fresh DanielVartanov/willgit bin/git-show-merges
+  # Interactive staging script.
   fresh DanielVartanov/willgit bin/git-wt-add
+  # Displays the state of your repo.
   fresh DanielVartanov/willgit bin/git-wtf
 fresh-options
 
@@ -17,6 +22,7 @@ fresh-options --bin
   fresh cypher/dotfiles bin/git-up --ref=2121437a9a325044fda0b73de0eaa5dc6e7dac73
   # Highlight something in a diff.
   fresh cypher/dotfiles bin/diff-highlight --ref=1529bf4c1441d844d94a14595dc2d739a5f4fa05
+  # Tool for referring to the most often used files and directories fast.
   fresh clvv/fasd fasd --ref=90b531a5daaa545c74c7d98974b54cbdb92659fc
   # Great tool for prettying photos of whiteboard text with imagemagick.
   fresh doismellburning/dotfiles bin/whiteboard-clean --ref=05779d46212665440496c811bd05fb5633836215
@@ -28,6 +34,7 @@ fresh-options --bin --ref=8c53f998bf6c7e8d6f3e0ab0755ba8b05264344d
 fresh-options
 
 fresh-options --bin --ref=1ce71cdc667c237a27bc09a44b6debd4c48c7e8
+  # Multiple tools for printing terminal colors.
   fresh mikker/dotfiles bin/colortest.sh # Print terminal colors.
   fresh mikker/dotfiles bin/256colors.pl # Print terminal colors.
   fresh mikker/dotfiles bin/color-spaces.pl # Print terminal colors.
@@ -42,20 +49,30 @@ fresh-options --bin
   fresh bin/mangrep
   # grep from man pages.
   fresh https://gist.github.com/3cba3ff196147ad42bac.git mangle.sh --ref=df2ebeab8ad79c87a0f1a0de45c256c6821abf22
+  # Filter and select from a list of input.
   fresh junegunn/fzf bin/fzf-tmux --ref=85751966e9d7628893796e3eac7e9051108a144b
   fresh bin/hsreset.sh
   fresh private_startup
 fresh-options
 
 fresh-options --bin --ref=96e3c09f018a2065c1442b92f007d631fba1e67f
+  # Truncate files.
   fresh rtomayko/dotfiles bin/trunc
+  # Write data from stid to bot stdout and stderr, listening in on a pipe.
   fresh rtomayko/dotfiles bin/ppeek
+  # Show processes listening on ports.
   fresh rtomayko/dotfiles bin/ports
+  # Delete all branches that are fully merged to specified branch.
   fresh rtomayko/dotfiles bin/git-prune-merged-branches
+  # Show commits on branch that don't exist on specified upstream branch.
   fresh rtomayko/dotfiles bin/git-outgoing
+  # Show commits on upstream branch that don't exist on current branch.
   fresh rtomayko/dotfiles bin/git-incoming
+  # Create a new branch for your commits and reset current to tracked HEAD.
   fresh rtomayko/dotfiles bin/git-cut-branch
+  # List files in conflict state.
   fresh rtomayko/dotfiles bin/git-conflicts
+  # List all objects sorted by their size.
   fresh rtomayko/dotfiles bin/git-big-object-report
   fresh rtomayko/dotfiles bin/man.cx # External man pages.
 fresh-options
