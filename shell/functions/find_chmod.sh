@@ -1,7 +1,7 @@
 
 # Run find with chmod with given parameters to all files of a type under path.
 # Default to the current directory.
-function find-chmod() {
+function find_chmod() {
     if [ -z "$3" ]; then
         find_path="."
     else

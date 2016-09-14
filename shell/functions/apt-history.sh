@@ -1,4 +1,5 @@
 # From https://github.com/miohtama/ztanesh
+# Won't work on some shells because of the "-" in function name.
 # Read apt log with "apt-history".
 # Usage:
 #   apt-history install

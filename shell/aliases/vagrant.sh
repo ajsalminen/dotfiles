@@ -1,0 +1,9 @@
+alias va=ansible_vagrant_run
+alias os=mosh
+alias vs='vagrant ssh'
+alias vp='vagrant provision'
+alias vu='vagrant up'
+alias vd='vagrant destroy'
+alias vr='vagrant reload'
+alias vh='vagrant halt'
+alias vst='vagrant status'

@@ -16,105 +16,15 @@ if [ "$TERM" != "dumb" ]; then
 fi
 
 
-GRC=$(which grc)
-if [ "$TERM" != dumb ] && [ -n GRC ]
-then
-    alias colourify="$GRC -es --colour=auto"
-    alias configure='colourify ./configure'
-    alias diff='colourify diff'
-    alias make='colourify make'
-    alias gcc='colourify gcc'
-    alias g++='colourify g++'
-    alias as='colourify as'
-    alias gas='colourify gas'
-    alias ld='colourify ld'
-    alias netstat='colourify netstat'
-    alias ping='colourify ping'
-    alias traceroute6='colourify /usr/bin/traceroute6'
-    alias ps='colourify ps'
-    alias curl='colourify curl'
-    alias hexdump='colourify hexdump'
-fi
-# At least bash/zsh.
-ensure_dir(){
-# extract everything before / from $1.
-dir="${1%/*}"
-if [ -n "$dir" ] && [ "$dir" != "$1" ]
-then
-mkdir -p $dir
-fi
-}
-
-create_and_edit() {
-ensure_dir $1
-emacsclient -n $1
-}
-alias e=create_and_edit
-
-# Works in bash and zsh, makes mv/cp automatically create dirs if missing.
-mkdir_copy_or_move() {
-destination="${@: -1}"
-ensure_dir $destination
-"$@"
-}
-alias mv='mkdir_copy_or_move mv'
-alias cp='mkdir_copy_or_move cp'
 alias md='mkdir -p'
-
-cat_url_or_file() {
-if [[ $1 == http://* || $1 == https://* ]]
-then
-curl -H "Accept: application/json" $1
-else
-cat $1
-fi
-}
-
-pretty_print_json() {
-cat_url_or_file $1 | python -mjson.tool | pygmentize -l javascript | less -Xfr
-}
-
-alias ppj=pretty_print_json
 
 mosh_root() {
     mosh root@"$*"
 }
 alias rs=mosh_root
 
-# From http://unix.stackexchange.com/questions/6463/find-searching-in-parent-directories-instead-of-subdirectories
-find-up() {
-  path=$(pwd)
-  while [[ "$path" != "" && ! -e "$path/$1" ]]; do
-    path=${path%/*}
-  done
-  echo "$path/"
-}
-
-ansible_vagrant_run() {
-# Some of this may not be needed.
-ANSIBLE_SSH_ARGS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o IdentityFile=~/.vagrant.d/insecure_private_key'
-ANSIBLE_HOST_KEY_CHECKING=false
-vagrant_top=$(find-up Vagrantfile)
-
-playbook=$(grep 'ansible.playbook' ${vagrant_top}Vagrantfile | sed -e 's/^.*"\(.*\)".*$/\1/')
-ansible-playbook -i ${vagrant_top}.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory -s --u vagrant $playbook --private-key=/home/anttis/.vagrant.d/insecure_private_key "$@"
-}
-
-alias va=ansible_vagrant_run
-alias os=mosh
-alias vs='vagrant ssh'
-alias vp='vagrant provision'
-alias vu='vagrant up'
-alias vd='vagrant destroy'
-alias vr='vagrant reload'
-alias vh='vagrant halt'
-alias vst='vagrant status'
-
 alias dud='du --max-depth=1 -h'
 alias duf='du -sh *'
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
-
 
 alias grep="grep --color=always"
 alias ls="ls --color=always"
@@ -138,25 +48,8 @@ alias cnf=/usr/lib/command-not-found
 alias howdoi='howdoi --all --num-answers 2'
 
 
-# page only when needed, set term to truncate lines for minified code etc.
-# default to insensitive matches and include a global agignore for minified exts.
-# Some info http://unix.stackexchange.com/questions/109211/preserving-color-output-with-cut
-g() {
-tput rmam # turn off automatic margin mode.
-# reset colors at the beginning of line because rmam can cut some seqs out.
-/usr/bin/ag --color -i --path-to-agignore=~/.agignore "$@" | sed "s/^/$(tput sgr0)/" | less -XFr
-local ret="$?"
-tput smam # turn on automatic margin mode.
-return "$ret"
-}
-
 alias gic='git difftool --extcmd icdiff -y'
 alias gcd='git difftool --extcmd colordiff -y'
-
-php_drupalcs(){
-phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme $1
-}
-alias pcd=php_drupalcs
 
 # asdz all probably not needed from fasd and free to reuse, f is useful.
 #source /etc/profile.d/ansible.sh
@@ -177,9 +70,6 @@ alias an="ansible-playbook -D  -i production site.yml --tags=$1 -l $2 --ask-vaul
 
 # Update aliases for realiaser
 alias > ~/.alias.cache
-
-# Don't like this from the zsh debian plugin (use it for ansible-playbook)
-unalias ap
 
 passwords_pipe(){
     while [ -f $pipelock ]
@@ -218,64 +108,10 @@ timeout 1 cat $decrypted > /dev/null # One more attempted read to make it exit
 # ansible_gpg_socat $0 $@
 # }
 
-
-# Because booting hangs if a VM is running.
-# http://askubuntu.com/questions/457329/shutting-down-all-virtualbox-vagrant-vms-in-one-easy-to-use-bash-command-that
-reboot(){
-vboxmanage list runningvms | sed -r 's/.*\{(.*)\}/\1/' | xargs -L1 -I {} VBoxManage controlvm {} savestate
-command sudo reboot
-}
-
 # nice idea from https://github.com/ElijahLynn/dotfiles/blob/master/home/.bash_aliases
 # Make a sound for when commands finish.
 export tada='/home/elijah/bin/sounds/TaDa.ogg'
 alias a='paplay $tada'
-alias ifconfig='echo learn to use the new util instead.'
-
-# http://serverfault.com/questions/413231/how-to-get-all-fingerprints-for-ssh-authorized-keys2-file
-# fingerprints .ssh/authorized_keys
-function fingerprints() {
-  local file="$1"
-  while read l; do
-    [[ -n $l && ${l###} = $l ]] && ssh-keygen -l -f /dev/stdin <<<$l
-  done < $file
-}
-
-# https://gist.github.com/janmoesen/1156154
-# Sort du's output but use human-readable units.
-function duh {
-	du -sk "$@" | sort -n;
-	du -sk "$@" | sort -n | while read size fname; do
-		for unit in KiB MiB GiB TiB PiB EiB ZiB YiB; do
-			if [ "$size" -lt 1024 ]; then
-				echo -e "${size}${unit}\t${fname}";
-				break;
-			fi;
-			size=$((size/1024));
-		done;
-	done;
-}
-
-function cli-fu() {
-curl "http://www.commandlinefu.com/commands/matching/$(echo "$@" | sed 's/ /-/g')/$(echo -n $@ | base64)/plaintext" | less
-}
-
-function drupal-patch-url() {
-patchname=$(echo "$1" | grep --color=never -Po '([^/]*)$')
-git checkout -b "$patchname"
-curl $1 | patch -p1
-}
-
-# Add some extra keys to ssh-agent when ssh-add is called.
-function ssh-add() {
-command ssh-add
-for i in $(find ~/.ssh/additional_keys/ -not -name '*.pub' -type f)
-do command ssh-add $i
-done
-}
-
-function install-deb() {
-dpkg -I $1 | grep Depends: | sed -r 's/(^ Depends: )|(\([^\)]+\))|(\| [^ ]+)|,//g' | xargs apt-get install
-}
+alias ifconfig='echo learn to use "ip" instead.'
 
 ansaconv ~/tmp/sixteencolors-extracted/$(shuf -n 1  ~/tmp/sixteencolors-extracted/list.txt)
