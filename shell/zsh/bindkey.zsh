@@ -25,3 +25,10 @@ bindkey '^R' fzf-history-widget
 # ztanesh dirstack binds
 bindkey '^[i'  insert-cycledleft
 bindkey '^[n'  insert-cycledright
+
+# Meta-m to chdir to the parent directory
+bindkey -s '\em' '^Ucd ..; ls^M'
+
+bindkey "^[q" fasd-complete
+bindkey "^[w" fasd-complete-f
+bindkey "^[t" fasd-complete-d

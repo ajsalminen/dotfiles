@@ -2,10 +2,6 @@ setopt completealiases
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-bindkey "^[q" fasd-complete
-bindkey "^[w" fasd-complete-f
-bindkey "^[t" fasd-complete-d
-
 # Not using autocd as go-command handles it.
 # setopt AUTO_CD
 # Don't overwrite, append!
@@ -43,9 +39,6 @@ accept-line() {
     zle .accept-line "$@"
 }
 zle -N accept-line
-
-# Meta-m to chdir to the parent directory
-bindkey -s '\em' '^Ucd ..; ls^M'
 
   _image_fts=(jpg jpeg png gif mng tiff tif xpm)
   for ft in $_image_fts ; do alias -s $ft=$XIVIEWER; done

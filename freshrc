@@ -126,6 +126,7 @@ fresh-options  --file=~/.zshrc
   fresh miohtama/ztanesh zsh-scripts/plugins/urltools/urltools.plugin.zsh --ref=e8c502535650fd1595645a5ccfe3cb4ce1919549 --filter="sed -e '\$a\'"
 # functions
   fresh shell/functions/\*
+  fresh shell/zsh/functions/\*
 fresh-options
 
 # Config that should work in all shells.

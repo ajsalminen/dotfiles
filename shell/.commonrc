@@ -15,41 +15,10 @@ if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b $DIR_COLORS`"
 fi
 
-
-alias md='mkdir -p'
-
-mosh_root() {
-    mosh root@"$*"
-}
-alias rs=mosh_root
-
-alias dud='du --max-depth=1 -h'
-alias duf='du -sh *'
-
-alias grep="grep --color=always"
-alias ls="ls --color=always"
-alias less="less -XFr"
-
-alias t='multitail --retry-all -f'
-alias to='htop'
-
-# ls, the common ones I use a lot shortened for rapid fire usage
-alias ls='ls --color'
-alias ll='ls -l'
-
 eval "$(fasd --init auto)"
 alias c='fasd_cd -d'
 # `-d` option present for bash completion
 # function fasd_cd is defined in posix-alias
-
-# search for commands
-alias cnf=/usr/lib/command-not-found
-
-alias howdoi='howdoi --all --num-answers 2'
-
-
-alias gic='git difftool --extcmd icdiff -y'
-alias gcd='git difftool --extcmd colordiff -y'
 
 # asdz all probably not needed from fasd and free to reuse, f is useful.
 #source /etc/profile.d/ansible.sh
@@ -62,56 +31,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Load scm_breeze
 [ -s "$HOME/opt/scm_breeze/scm_breeze.sh" ] && source "$HOME/opt/scm_breeze/scm_breeze.sh"
 
-# Alias for gitjk
-alias gitjk="history 10 | tac | gitjk_cmd"
-
-# Alias for faster work with ansible
-alias an="ansible-playbook -D  -i production site.yml --tags=$1 -l $2 --ask-vault-pass"
 
 # Update aliases for realiaser
 alias > ~/.alias.cache
-
-passwords_pipe(){
-    while [ -f $pipelock ]
-    do
-        socat -u EXEC:"gpg -d $crypted" CREATE:$decrypted;
-    done
-}
-
-ansible_gpg_socat(){
-playbookpath=~/projektit/ansible/kifi-playbooks
-pipepath=$playbookpath/.local/vars
-pipelock=/tmp/passwords_pipe.lock
-crypted=$pipepath/passwords.yml.gpg
-decrypted=$pipepath/passwords.yml
-
-
-touch $pipelock
-passwords_pipe &
-command=$1
-shift
-# bash/zsh and some others
-command $command $@
-rm $pipelock
-timeout 1 cat $decrypted > /dev/null # One more attempted read to make it exit
-
-}
-
-# vagrant(){
-# ansible_gpg_socat $0 $@
-# }
-# ansible-playbook(){
-# ansible_gpg_socat $0 $@
-# }
-
-# ansible-playbook-debugger(){
-# ansible_gpg_socat $0 $@
-# }
-
-# nice idea from https://github.com/ElijahLynn/dotfiles/blob/master/home/.bash_aliases
-# Make a sound for when commands finish.
-export tada='/home/elijah/bin/sounds/TaDa.ogg'
-alias a='paplay $tada'
-alias ifconfig='echo learn to use "ip" instead.'
 
 ansaconv ~/tmp/sixteencolors-extracted/$(shuf -n 1  ~/tmp/sixteencolors-extracted/list.txt)
