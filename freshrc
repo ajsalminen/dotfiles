@@ -51,6 +51,8 @@ fresh-options --bin
   fresh https://gist.github.com/3cba3ff196147ad42bac.git mangle.sh --ref=df2ebeab8ad79c87a0f1a0de45c256c6821abf22
   # Filter and select from a list of input.
   fresh junegunn/fzf bin/fzf-tmux --ref=85751966e9d7628893796e3eac7e9051108a144b
+  # Parses dpkg log files for installation, removal, and rollback information.
+  fresh AlexanderStohr/apt-history apt-history --ref=1118ca1b085efd63beee8854b2b07b4e9952059f
   fresh bin/hsreset.sh
   fresh private_startup
 fresh-options
