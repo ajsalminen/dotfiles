@@ -36,3 +36,5 @@ bindkey "^[t" fasd-complete-d
 # jump-char
 bindkey "^[f" vi-find-prev-char
 bindkey "^[p" vi-find-next-char
+
+bindkey "^[z" undo
