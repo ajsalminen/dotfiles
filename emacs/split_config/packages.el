@@ -54,7 +54,7 @@
         jinja2-mode
         calfw
         fasd
-        ;; jump-char
+        jump-char
         geben
         f ;; a library
         jabber

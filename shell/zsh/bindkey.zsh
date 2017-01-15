@@ -32,3 +32,7 @@ bindkey -s '\em' '^Ucd ..; ls^M'
 bindkey "^[q" fasd-complete
 bindkey "^[w" fasd-complete-f
 bindkey "^[t" fasd-complete-d
+
+# jump-char
+bindkey "^[f" vi-find-prev-char
+bindkey "^[p" vi-find-next-char
