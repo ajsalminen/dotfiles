@@ -1,4 +1,4 @@
-go() {
+zshgocmd() {
    if [ -f "$1" ]; then
      if [ -n "`file $1 | grep '\(text\|empty\|no magic\)'`" ]; then
        if [ -w "$1" ]; then
@@ -31,4 +31,4 @@ go() {
    fi
  }
 
- alias go=go
+ alias zshgocmd=zshgocmd

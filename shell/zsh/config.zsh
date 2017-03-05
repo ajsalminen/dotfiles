@@ -33,7 +33,7 @@ accept-line() {
         if [ "$CONTEXT" = "vared" ]; then
         elif whence $FIRSTWORD 2>&1 >/dev/null; then
         else
-            BUFFER="go $BUFFER"
+            BUFFER="zshgocmd $BUFFER"
         fi
     fi
     zle .accept-line "$@"
