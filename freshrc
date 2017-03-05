@@ -60,7 +60,7 @@ fresh-options
 fresh-options --bin --ref=96e3c09f018a2065c1442b92f007d631fba1e67f
   # Truncate files.
   fresh rtomayko/dotfiles bin/trunc
-  # Write data from stid to bot stdout and stderr, listening in on a pipe.
+  # Write data from stin to both stdout and stderr, listening in on a pipe.
   fresh rtomayko/dotfiles bin/ppeek
   # Show processes listening on ports.
   fresh rtomayko/dotfiles bin/ports
