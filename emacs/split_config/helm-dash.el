@@ -17,9 +17,9 @@
 (add-hook 'css-mode-hook 'css-html-doc)
 (add-hook 'html-mode-hook 'css-html-doc)
 
-(defun js-doc ()
+(defun javascript-doc ()
   (interactive)
-  (setq-local helm-dash-docsets '("JavaScript" "jQuery" "jQuery UI" )))
+  (setq-local helm-dash-docsets '("JavaScript" "jQuery" "jQuery_UI" )))
 
 (add-hook 'js2-mode-hook 'javascript-doc)
 
