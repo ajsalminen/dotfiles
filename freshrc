@@ -92,12 +92,6 @@ fresh zsh-users/zsh-syntax-highlighting .  \
   --file=~/opt/zsh/zsh-syntax-highlighting/ \
   --ref=fdaeec45146b5fe6b2c2b01da6f97681d89f8094
 
-fresh-options  --file=~/.zshrc
-  fresh shell/zsh/go-command.plugin.zsh
-  fresh shell/zsh/config.zsh
-  fresh shell/zsh/dirstack-cycle.zsh
-fresh-options
-
 fresh-options  --file=~/.zshrc --ref=8c53f998bf6c7e8d6f3e0ab0755ba8b05264344d
   fresh twe4ked/dotfiles shell/zsh/completion.zsh
   fresh twe4ked/dotfiles shell/zsh/prompt.zsh
@@ -130,6 +124,13 @@ fresh-options  --file=~/.zshrc
   fresh shell/functions/\*
   fresh shell/zsh/functions/\*
 fresh-options
+
+fresh-options  --file=~/.zshrc
+  fresh shell/zsh/go-command.plugin.zsh
+  fresh shell/zsh/config.zsh
+  fresh shell/zsh/dirstack-cycle.zsh
+fresh-options
+
 
 # Config that should work in all shells.
 fresh shell/.commonrc --file

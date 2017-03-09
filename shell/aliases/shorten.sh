@@ -6,16 +6,16 @@ alias md='mkdir -p'
 alias rs=mosh_root
 alias dud='du --max-depth=1 -h'
 alias duf='du -sh *'
-alias grep="grep --color=always"
-alias ls="ls --color=always"
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
 alias less="less -XFr"
 
 alias t='multitail --retry-all -f'
 alias to='htop'
 
-# ls, the common ones I use a lot shortened for rapid fire usage
-alias ls='ls --color'
-alias ll='ls -l'
+# reverse order, sorted by modification time descending
+alias lt='ls --reverse -t'
+alias ll='ls --reverse -tl'
 
 # search for commands
 alias cnf=/usr/lib/command-not-found

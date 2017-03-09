@@ -23,7 +23,7 @@ bindkey "^[s" insert-sudo
 accept-line() {
 
     if [[ -z $BUFFER ]] then
-        ls --color=auto
+        lt
     else
         WORDS=( ${(z)BUFFER} )
 
