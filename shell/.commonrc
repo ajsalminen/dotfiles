@@ -1,6 +1,7 @@
 PATH=$PATH:~/drush/:~/opt/fasd/:~/bin:~/opt/icdiff/
 EDITOR=emacsclient
 SUDO_EDITOR=emacsclient
+URLTOOLS_METHOD=python
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export SURFRAW_text_browser=$(which links)
 export SURFRAW_graphical=no
