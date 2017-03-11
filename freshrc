@@ -150,3 +150,6 @@ fresh pkrumins/sed-cheat-sheet sed.stream.editor.cheat.sheet.txt --file=~/.cheat
 # emacs
 fresh  emacs/split_config --file=~/.emacs.d/split_config/
 fresh  emacs/init.el --file=~/.emacs.d/init.el
+
+# xmonad
+fresh xmonad.hs --file=~/.xmonad/xmonad.hs
