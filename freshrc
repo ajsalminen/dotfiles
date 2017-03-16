@@ -154,3 +154,5 @@ fresh  emacs/init.el --file=~/.emacs.d/init.el
 # xmonad
 fresh xmonad.hs --file=~/.xmonad/xmonad.hs
 fresh .xmobarrc --file
+
+fresh .keynavrc --file
