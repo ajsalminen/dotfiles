@@ -33,7 +33,7 @@ u cut-up
 i cut-right
 y cut-left,cut-up
 j cut-right,cut-up
-b9 cut-left,cut-down
+b cut-left,cut-down
 o cut-right,cut-down
 shift+n move-left
 shift+e move-down
