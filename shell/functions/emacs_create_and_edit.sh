@@ -7,8 +7,9 @@ emacs_create_and_edit() {
         filename=${1%%:*}
         line=${1#*:}
         if [ ! -z "$line" ]; then
-            line="+$line"
+            emacsclient -n "+$line" "$filename"
         fi
+    else
+        emacsclient -n "$1"
     fi
-    emacsclient -n $line "$filename"
 }
