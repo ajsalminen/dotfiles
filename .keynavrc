@@ -31,18 +31,18 @@ n cut-left
 e cut-down
 u cut-up
 i cut-right
-y cut-left,cut-up
-j cut-right,cut-up
-b cut-left,cut-down
-o cut-right,cut-down
+l cut-left,cut-up
+y cut-right,cut-up
+k cut-left,cut-down
+m cut-right,cut-down
 shift+n move-left
 shift+e move-down
 shift+u move-up
 shift+i move-right
-shift+y 99move-left,move-up
-shift+u move-right,move-up
-shift+b move-left,move-down
-shift+o move-right,move-down
+shift+l move-left,move-up
+shift+y move-right,move-up
+shift+k move-left,move-down
+shift+m move-right,move-down
 space warp,click 3,end
 semicolon warp,end
 1 click 1
