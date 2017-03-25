@@ -132,6 +132,7 @@ fresh-options
 fresh-options  --file=~/.zshrc
   fresh shell/zsh/go-command.plugin.zsh
   fresh shell/zsh/config.zsh
+  fresh shell/zsh/completion.zsh
   fresh shell/zsh/dirstack-cycle.zsh
 fresh-options
 
