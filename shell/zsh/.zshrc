@@ -41,19 +41,6 @@ _files_and_commands () {
 compdef '_files || _command_names' -command-
 #compdef '_files_and_commands' -command-
 
-
-# completion for a couple of aliases
-compdef rs=ssh
-compdef os=ssh
-compdef vs=ssh
-compdef vp=ssh
-compdef vu=ssh
-compdef vd=ssh
-compdef vr=ssh
-compdef vh=ssh
-compdef va=ssh
-
-
 # Complete on empty line instead of inserting a tab.
 # (The default is mainly for pasting indented snippets.)
 zstyle ':completion:*' insert-tab false
