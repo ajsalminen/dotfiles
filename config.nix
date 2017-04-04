@@ -12,7 +12,7 @@
         # apparix
         # nq
         # jq
-        ansible
+        python27Packages.ansible_2_1
         vagrant
         # isync
         python27Packages.boto
