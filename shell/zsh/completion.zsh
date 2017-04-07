@@ -22,3 +22,16 @@ zstyle ":completion:*:commands" rehash 1
 
 # Enable completion.
 autoload -U compinit && compinit
+
+# Completion for mosh aliases.
+compdef rs=ssh
+compdef os=ssh
+
+# Completion for vagrant aliases.
+compdef vs=ssh
+compdef vp=ssh
+compdef vu=ssh
+compdef vd=ssh
+compdef vr=ssh
+compdef vh=ssh
+compdef va=ssh
