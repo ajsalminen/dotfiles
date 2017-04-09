@@ -5,9 +5,11 @@ emacs_create_and_edit() {
     if [[ $1 == *":"* ]]; then
         # Requires bash/zsh/ksh.
         filename=${1%%:*}
-        line=${1#*:}
-        if [ ! -z "$line" ]; then
+        line=${${1#*:}%%:*}
+        if [ ! -z "$line" ] && [ ! -z "${line##*[!0-9]*}" ]; then
             emacsclient -n "+$line" "$filename"
+        else
+            emacsclient -n "$filename"
         fi
     else
         emacsclient -n "$1"
