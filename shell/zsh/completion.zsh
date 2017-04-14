@@ -20,6 +20,10 @@ zstyle ':completion:*:(vs|vp|vu|vd|vh|va|vr):*' hosts "${(f)$(</etc/vagrant_host
 # https://unix.stackexchange.com/questions/2179/rebuild-auto-complete-index-or-whatever-its-called-and-binaries-in-path-cach
 zstyle ":completion:*:commands" rehash 1
 
+zstyle ':completion:history-words:*' list yes
+zstyle ':completion:history-words:*' remove-all-dups yes
+
+
 # Enable completion.
 autoload -U compinit && compinit
 

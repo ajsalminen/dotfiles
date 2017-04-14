@@ -38,3 +38,12 @@ bindkey "^[f" vi-find-prev-char
 bindkey "^[p" vi-find-next-char
 
 bindkey "^[z" undo
+
+# Very useful for cycling through arguments in command history
+autoload -Uz copy-earlier-word
+zle -N copy-earlier-word
+bindkey "^[," copy-earlier-word
+
+# Word-level history completion.
+bindkey "\eu" _history-complete-older
+bindkey "\ee" _history-complete-newer
