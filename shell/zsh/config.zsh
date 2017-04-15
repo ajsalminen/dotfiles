@@ -14,6 +14,14 @@ SAVEHIST=10000
 HISTSIZE=10000
 
 
+# Words  are  complete  shell  command  arguments.
+autoload -Uz select-word-style
+select-word-style shell
+
+# for backward-kill, all but / are word chars (ie, delete word up to last directory)
+zstyle ':zle:backward-kill-word*' word-style standard
+zstyle ':zle:*kill*' word-chars '*?_-.[]~=&;!#$%^(){}<>'
+
 #Alt-S runs command with sudo
 insert_sudo () { BUFFER="sudo $BUFFER"; zle accept-line }
 zle -N insert-sudo insert_sudo
