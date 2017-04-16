@@ -3,7 +3,7 @@ autoload -U filter-select; filter-select -i
 
 
 bindkey "^[a" zaw
-bindkey "^[y" zaw-history
+bindkey "^[[29~" zaw-history
 bindkey -M filterselect '^[[1;5C' emacs-forward-word
 bindkey -M filterselect '^[[1;5D' emacs-backward-word
 bindkey -M filterselect "^[[3~" delete-char-or-list

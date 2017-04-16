@@ -1,6 +1,9 @@
 setopt auto_pushd
 setopt pushd_ignore_dups
 
+# Offer the first completion even when there are multiple possible.
+setopt menu_complete
+
 # Not using autocd as go-command handles it.
 # setopt AUTO_CD
 # Don't overwrite, append!
@@ -14,13 +17,21 @@ SAVEHIST=10000
 HISTSIZE=10000
 
 
-# Words  are  complete  shell  command  arguments.
-autoload -Uz select-word-style
-select-word-style shell
+# Have insert-last-word and copy-earlier-word provide full argument values.
+zstyle ':zle:copy-earlier-word*' word-style shell
+zstyle ':zle:insert-last-word*' word-style shell
 
-# for backward-kill, all but / are word chars (ie, delete word up to last directory)
-zstyle ':zle:backward-kill-word*' word-style standard
+# Make sure / isn't a word-char.
 zstyle ':zle:*kill*' word-chars '*?_-.[]~=&;!#$%^(){}<>'
+
+# Define a set of word commands for handling complete shell arguments.
+autoload -Uz select-word-style kill-word-match backward-kill-word-match backward-word-match forward-word-match
+zle -N shellword-forward-word forward-word-match
+zle -N shellword-backward-word backward-word-match
+zle -N shellword-kill-word kill-word-match
+zle -N shellword-backward-kill-word backward-kill-word-match
+zstyle ':zle:shellword-*' word-style shell
+
 
 #Alt-S runs command with sudo
 insert_sudo () { BUFFER="sudo $BUFFER"; zle accept-line }

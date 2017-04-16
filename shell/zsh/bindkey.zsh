@@ -23,8 +23,8 @@ bindkey '\ec' fzf-cd-widget
 bindkey '^R' fzf-history-widget
 
 # ztanesh dirstack binds
-bindkey '^[i'  insert-cycledleft
-bindkey '^[n'  insert-cycledright
+bindkey "^[^[[C" insert-cycledleft
+bindkey "^[^[[D"  insert-cycledright
 
 # Meta-m to chdir to the parent directory
 bindkey -s '\em' '^Ucd ..; ls^M'
@@ -34,8 +34,8 @@ bindkey "^[w" fasd-complete-f
 bindkey "^[t" fasd-complete-d
 
 # jump-char
-bindkey "^[f" vi-find-prev-char
-bindkey "^[p" vi-find-next-char
+bindkey "^[n" vi-find-prev-char
+bindkey "^[i" vi-find-next-char
 
 bindkey "^[z" undo
 
@@ -47,3 +47,8 @@ bindkey "^[," copy-earlier-word
 # Word-level history completion.
 bindkey "\eu" _history-complete-older
 bindkey "\ee" _history-complete-newer
+
+bindkey "^[l" shellword-backward-word
+bindkey "^[y" shellword-forward-word
+bindkey "^[f" shellword-backward-kill-word
+bindkey "^[p" shellword-kill-word
