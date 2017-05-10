@@ -21,6 +21,7 @@ bindkey '\e[B' down-line-or-beginning-search
 bindkey '^T' fzf-file-widget
 bindkey '\ec' fzf-cd-widget
 bindkey '^R' fzf-history-widget
+bindkey -s '^O' "lf\n"
 
 # ztanesh dirstack binds
 bindkey "^[^[[C" insert-cycledleft
@@ -38,6 +39,9 @@ bindkey "^[n" vi-find-prev-char
 bindkey "^[i" vi-find-next-char
 
 bindkey "^[z" undo
+
+bindkey "^[z" undo
+
 
 # Very useful for cycling through arguments in command history
 autoload -Uz copy-earlier-word
