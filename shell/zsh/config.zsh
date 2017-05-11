@@ -4,6 +4,12 @@ setopt pushd_ignore_dups
 # Offer the first completion even when there are multiple possible.
 setopt menu_complete
 
+# Support ksh-style globbing that bash also supports by default.
+setopt KSH_GLOB
+# Let globbing work for command substitutions.
+setopt GLOB_SUBST
+
+
 # Not using autocd as go-command handles it.
 # setopt AUTO_CD
 # Don't overwrite, append!
