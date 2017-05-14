@@ -104,7 +104,7 @@ fresh CyberShadow/urxvt-perls keyboard-select --file=~/.urxvt/ext/keyboard-selec
 fresh .Xresources --file
 
 # zsh
-fresh ajsalminen/zaw . --file=~/opt/zsh/zaw/ # whole repository
+fresh zsh-users/zaw . --file=~/opt/zsh/zaw/ # whole repository
 fresh ajsalminen/scm_breeze . --file=~/opt/scm_breeze/ # whole repository
 
 # whole repository
