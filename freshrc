@@ -194,3 +194,4 @@ fresh .keynavrc --file
 # nix package manager.
 fresh config.nix --file=~/.nixpkgs/config.nix
 fresh ajsalminen/hacker-quotes hacker-quotes.plugin.zsh --file=~/.zshrc --ref=ddb6b46536f65f58714ab8d5be4c52f4df63a734
+fresh --bin ajsalminen/filial filial.scm

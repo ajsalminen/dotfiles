@@ -6,8 +6,6 @@ setopt menu_complete
 
 # Support ksh-style globbing that bash also supports by default.
 setopt KSH_GLOB
-# Let globbing work for command substitutions.
-setopt GLOB_SUBST
 
 
 # Not using autocd as go-command handles it.
@@ -49,7 +47,7 @@ accept-line() {
     if [[ -z $BUFFER ]] then
         lt
     else
-        WORDS=( ${(z)BUFFER} )
+        WORDS=( "${(z)BUFFER}" )
 
         # Unfortunately ${${(z)BUFFER}[1]} works only for at least two words,
         # thus I had to use additional variable WORDS here.
@@ -85,15 +83,18 @@ zle -N accept-line
 alias -g H='| head'
 alias -g T='| tail'
 alias -g G='| grep'
-alias -g L="| less"
-alias -g M="| most"
-alias -g LL="2>&1 | less"
-alias -g CA="2>&1 | cat -A"
-alias -g NE="2> /dev/null"
-alias -g NUL="> /dev/null 2>&1"
-alias -g P="2>&1| pygmentize -l pytb"
+alias -g L='| less'
+alias -g M='| most'
+alias -g LL='2>&1 | less'
+alias -g CA='2>&1 | cat -A'
+alias -g NE='2> /dev/null'
+alias -g NUL='> /dev/null 2>&1'
+alias -g P='2>&1| pygmentize -l pytb'
 
 
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
+
+# For using filial with glob_subst turned on. (useful with ls)
+alias -g FL='${~$(filial.scm zsh audio)}'
