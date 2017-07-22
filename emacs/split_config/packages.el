@@ -52,7 +52,6 @@
         helm-gtags
         ;;emacs-eclim
         jinja2-mode
-        calfw
         fasd
         jump-char
         geben

@@ -1,7 +1,3 @@
-
-(require 'calfw)
-(require 'calfw-org)
-
 (add-hook 'org-mode-hook
           (lambda ()
             (org-indent-mode t)
