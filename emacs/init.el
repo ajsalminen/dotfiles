@@ -59,7 +59,6 @@
 (load-user-file "split_config/todotxt.el")
 (load-user-file "split_config/programming.el")
 (load-user-file "split_config/selector.el")
-(load-user-file "helm-fzf/helm-fzf.el")
 (load-user-file "split_config/org.el")
 (load-user-file "split_config/hideshow.el")
 (load-user-file "split_config/settings.el")
