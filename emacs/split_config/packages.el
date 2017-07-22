@@ -12,7 +12,7 @@
         ;;bang
         ;; qsimpleq-theme
         base16-theme
-        ;;expand-region
+        expand-region
         fill-column-indicator
         ;;flex-autopair
         ;;flymake-cursor
@@ -75,6 +75,7 @@
         gtags ;; remove once https://github.com/arnested/drupal-mode/issues/67 is fixed.
         helm-recoll
         ;;hide-cmnt
+        unbound
         ))
 ;; Needed by remove-if
 (require 'cl)

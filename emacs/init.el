@@ -31,11 +31,10 @@
 (require 'unbound)
 (require 'ansible-runner)
 (require 'expand-region)
-(require 'saveplace)
 (require 'keyfreq)
 (require 'auto-complete-config)
 
-(require 'speedbar)
+;;(require 'speedbar)
 
 (speedbar-add-supported-extension ".module")
 (speedbar-add-supported-extension ".info")
@@ -131,4 +130,3 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:background nil))))
  '(which-func ((t (:foreground "plum1")))))
-
