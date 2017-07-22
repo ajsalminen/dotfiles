@@ -23,6 +23,7 @@
         torbrowser
         x2goclient
         less
+        xpra
         # …
       ];
     };
