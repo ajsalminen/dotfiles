@@ -183,6 +183,7 @@ fresh pkrumins/sed-cheat-sheet sed.stream.editor.cheat.sheet.txt --file=~/.cheat
 # emacs text editor.
 fresh  emacs/split_config --file=~/.emacs.d/split_config/
 fresh  emacs/init.el --file=~/.emacs.d/init.el
+fresh  emacs/ansible-runner.el --file=~/.emacs.d/ansible-runner/ansible-runner.el
 
 # xmonad window manager.
 fresh xmonad.hs --file=~/.xmonad/xmonad.hs
