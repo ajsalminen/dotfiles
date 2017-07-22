@@ -55,5 +55,5 @@ entry
 (server-start)
 (require 'org-protocol)
 
-(add-to-list 'load-path "~/opt/ob-ansible")
+(add-to-list 'load-path "~/.emacs.d/ob-ansible")
 (load "ob-ansible.el")
