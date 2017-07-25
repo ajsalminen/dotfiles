@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xkbcomp -I$HOME/.xkb ~/.xkb/keymap/neo2qwerty $DISPLAY
+emacs

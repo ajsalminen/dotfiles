@@ -54,6 +54,7 @@ fresh-options --bin
   # Parses dpkg log files for installation, removal, and rollback information.
   fresh AlexanderStohr/apt-history apt-history --ref=1118ca1b085efd63beee8854b2b07b4e9952059f
   fresh bin/hsreset.sh
+  fresh bin/xpra-session
   fresh private_startup
 fresh-options
 
