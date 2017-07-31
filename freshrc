@@ -192,6 +192,9 @@ fresh  emacs/ob-ansible --file=~/.emacs.d/ob-ansible/
 fresh xmonad.hs --file=~/.xmonad/xmonad.hs
 fresh .xmobarrc --file
 
+# Helps rxvt work on every system the dotfiles are installed on.
+fresh rxvt-unicode-256color --file=~/.terminfo/r/rxvt-unicode-256color
+
 # keynav is a tool for controlling the mouse with the keyboard.
 fresh .keynavrc --file
 
