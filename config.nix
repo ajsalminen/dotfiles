@@ -20,10 +20,8 @@
         # isync
         python27Packages.boto
         peco
-        torbrowser
-        x2goclient
         less
-        # …
+        chromium
       ];
     };
   };
