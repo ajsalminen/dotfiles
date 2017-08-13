@@ -22,6 +22,7 @@
         peco
         less
         chromium
+        global
       ];
     };
   };
