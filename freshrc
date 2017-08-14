@@ -188,8 +188,8 @@ fresh  emacs/ansible-runner.el --file=~/.emacs.d/ansible-runner/ansible-runner.e
 fresh  ajsalminen/helm-fasd . --file=~/.emacs.d/helm-fasd/
 fresh  emacs/ob-ansible --file=~/.emacs.d/ob-ansible/
 
-fresh ssh://linger.sytes.net/~repos/dotfiles_private.git .wl --file=~/.wl
-fresh ssh://linger.sytes.net/~repos/dotfiles_private.git .folders --file=~/.folders
+fresh ssh://antti@linger.sytes.net/~repos/dotfiles_private.git .wl --file=~/.wl
+fresh ssh://antti@linger.sytes.net/~repos/dotfiles_private.git .folders --file=~/.folders
 
 # xmonad window manager.
 fresh xmonad.hs --file=~/.xmonad/xmonad.hs
