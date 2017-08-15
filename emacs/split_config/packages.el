@@ -75,6 +75,7 @@
         helm-recoll
         ;;hide-cmnt
         unbound
+        wanderlust
         ))
 ;; Needed by remove-if
 (require 'cl)
