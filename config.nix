@@ -23,6 +23,7 @@
         less
         chromium
         global
+        recoll
       ];
     };
   };
