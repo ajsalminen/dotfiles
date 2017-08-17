@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PATH=$PATH:/home/anttis/.nix-profile/bin:/home/anttis/bin
+DISPLAY=:0
+recollindex -m
+emacs --daemon
+emacsclient -nc
+chromium &

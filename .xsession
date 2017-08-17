@@ -13,10 +13,9 @@ export EDITOR=emacsclient
 # Without this there will be error messages with git.
 unset GNOME_KEYRING_CONTROL
 trayer --edge top --align right --SetDockType true --expand true --width 10 --transparent true --tint 0x000000 --height 20 & # --SetPartialStrut false
-emacs --daemon
-emacsclient -nc
 ~/bin/private_startup
-recollindex -m
+xhost +
+sudo lxc-attach -n fedora-priv -- su anttis -c /home/anttis/bin/container-session
 urxvt &
 nm-applet &
 #terminator -x selfspy &
