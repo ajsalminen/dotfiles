@@ -24,6 +24,7 @@
         chromium
         global
         recoll
+        youtube-dl
       ];
     };
   };
