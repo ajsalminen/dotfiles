@@ -25,7 +25,7 @@
         global
         recoll
         youtube-dl
-        rxvt
+        rxvt-unicode-with-perl-with-unicode3-with-plugins
       ];
     };
   };
