@@ -25,6 +25,7 @@
         global
         recoll
         youtube-dl
+        rxvt
       ];
     };
   };
