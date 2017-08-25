@@ -4,7 +4,7 @@
 ag_truncate_lines() {
     tput rmam # turn off automatic margin mode.
     # reset colors at the beginning of line because rmam can cut some seqs out.
-    /usr/bin/ag --color -i --path-to-agignore=~/.agignore "$@" | sed "s/^/$(tput sgr0)/" | less -XFr
+    ag --color -i --path-to-agignore=~/.agignore "$@" | sed "s/^/$(tput sgr0)/" | less -XFr
     local ret="$?"
     tput smam # turn on automatic margin mode.
     return "$ret"
