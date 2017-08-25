@@ -10,7 +10,7 @@ urxvt*dynamicColors: on
 
 
 ! Selections with keyboard
-URxvt.perl-ext-common: ...,keyboard-select
+URxvt.perl-ext-common: keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
 ! Make urxvt keys like xterm/terminator
