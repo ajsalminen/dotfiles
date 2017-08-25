@@ -26,7 +26,6 @@
         recoll
         youtube-dl
         rxvt_unicode
-        urxvt-perls
       ];
     };
   };
