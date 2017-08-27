@@ -179,7 +179,12 @@ fresh pkrumins/bash-history-cheat-sheet bash-history-cheat-sheet.txt --file=~/.c
 fresh pkrumins/awk-cheat-sheet awk.cheat.sheet.txt --file=~/.cheat/external/awk_table --ref=f0845c9c9493d74d72819e63e57fd7aa747258fc
 fresh pkrumins/sed-cheat-sheet sed.stream.editor.cheat.sheet.txt --file=~/.cheat/external/sed_table --ref=652669838e051920266f363ac882eaadb2e55cfe
 
-#fresh thoughtbot/dotfiles zsh/completion/_ag --file=completion/_ag
+# global ignore file for ag.
+fresh .grepignore --file=~/.grepignore
+
+# Need to adapt to GNU Global https://robots.thoughtbot.com/silver-searcher-tab-completion-with-exuberant-ctags
+# fresh thoughtbot/dotfiles zsh/completion/_ag --file=~/.zsh/_ag
+
 
 # emacs text editor.
 fresh  emacs/split_config --file=~/.emacs.d/split_config/
