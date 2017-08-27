@@ -27,6 +27,8 @@
         youtube-dl
         rxvt_unicode
         ag
+        sqlite # Required by helm-dash
+        grc
       ];
     };
   };
