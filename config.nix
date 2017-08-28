@@ -29,6 +29,9 @@
         ag
         sqlite # Required by helm-dash
         grc
+        cheat
+        mosh
+        alsa-utils
       ];
     };
   };
