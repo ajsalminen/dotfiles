@@ -31,7 +31,6 @@
         grc
         cheat
         mosh
-        alsa-utils
       ];
     };
   };
