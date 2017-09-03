@@ -90,6 +90,10 @@ fresh-options --bin --ref=068d71597beb90c0086eb560743dccfd78a2e99e
   fresh sivel/speedtest-cli speedtest.py
 fresh-options
 
+fresh-options --bin --ref=085adbf50dfb9698aa8e1435486515ad4bb4d1b2
+  fresh taw/unix-utilities bin/xpstree
+fresh-options
+
 # Tool for adding github's boilerplate .gitignore files.
 fresh-options --ref=8bdc6878bf3048e878a4f56c82748d94a3700fa3
   fresh --bin simonwhitaker/gibo gibo
