@@ -31,6 +31,7 @@
         grc
         cheat
         mosh
+        exa
       ];
     };
   };
