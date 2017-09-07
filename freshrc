@@ -150,9 +150,6 @@ fresh-options  --file=~/.zshrc
   fresh miohtama/ztanesh zsh-scripts/plugins/cp/cp.plugin.zsh --ref=e8c502535650fd1595645a5ccfe3cb4ce1919549
   # urldecode/encode, escape. Add newline to the end with the filter.
   fresh miohtama/ztanesh zsh-scripts/plugins/urltools/urltools.plugin.zsh --ref=e8c502535650fd1595645a5ccfe3cb4ce1919549 --filter="sed -e '\$a\'"
-  # Insert most recent file in current directory to command line.
-  # from https://gist.github.com/dmerejkowsky/972c51582d75a3f019fb0ca11707911b
-    fresh https://gist.github.com/972c51582d75a3f019fb0ca11707911b.git --ref=67aeffeda16ccc1434bb76238da763061515202d
   # Change to last dir in lf file manager on exit.
   fresh gokcehan/lf etc/lf.sh --ref=c93738a6ec2052069edbf2b9fc12b6ddb7f92872
 # functions
