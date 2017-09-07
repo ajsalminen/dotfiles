@@ -32,6 +32,7 @@
         cheat
         mosh
         exa
+        ffmpeg
       ];
     };
   };
