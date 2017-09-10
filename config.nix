@@ -14,6 +14,7 @@
         # jq
         python27Packages.ansible_2_1
         python27Packages.httplib2
+        python36Packages.howdoi
         php70
         php70Packages.composer
         vagrant
