@@ -110,7 +110,7 @@ fresh .Xresources --file
 
 # zsh
 fresh zsh-users/zaw . --file=~/opt/zsh/zaw/ # whole repository
-fresh ajsalminen/scm_breeze . --file=~/opt/scm_breeze/ # whole repository
+fresh ajsalminen/scm_breeze . --file=~/.scm_breeze/ # whole repository
 
 # whole repository
 fresh zsh-users/zsh-syntax-highlighting .  \

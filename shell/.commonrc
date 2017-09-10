@@ -31,7 +31,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #export PATH=$PATH:~/.gem/ruby/1.8/bin
 
 # Load scm_breeze
-[ -s "$HOME/opt/scm_breeze/scm_breeze.sh" ] && source "$HOME/opt/scm_breeze/scm_breeze.sh"
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 
 # Update aliases for realiaser
