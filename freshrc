@@ -1,5 +1,5 @@
 # The fresh tool used to manage dotfiles.
-fresh-options --ref=a38d020b7c78470cd59382245933e0ef62db5712
+fresh-options --ref=2660d3d6505c67914c5b8aa7b0bf5d578b371005
   fresh freshshell/fresh bin/fresh --bin
   fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
 fresh-options
