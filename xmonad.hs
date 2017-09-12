@@ -45,7 +45,7 @@ alternateBinds bind w =
 
 main :: IO ()
 main = do
-  xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
+  xmproc <- spawnPipe "xmobar ~/.xmobarrc"
   xmonad $ defaultConfig{
      keys = myKeys <+> keys defaultConfig
     , terminal = "urxvt"
@@ -58,7 +58,7 @@ main = do
                          { ppOutput = hPutStrLn xmproc
                          , ppTitle = xmobarColor "green" "" . shorten 50
                          }
-                         >> updatePointer (Relative 0.99 0)
+                         >> updatePointer (1, 1) (0,0)
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
     , ((mod4Mask, xK_b), sendMessage ToggleStruts)
