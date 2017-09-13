@@ -1,0 +1,7 @@
+#!/bin/sh
+export PASSWORD_STORE_TOMB_FILE=~/.kifi.tomb
+export PASSWORD_STORE_TOMB_KEY=~/.kifi.tomb.key
+export PASSWORD_STORE_DIR=~/.kifipass
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export PASSWORD_STORE_EXTENSIONS_DIR=~/.pass-extensions
+pass $@

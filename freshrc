@@ -218,3 +218,13 @@ fresh .keynavrc --file
 fresh config.nix --file=~/.nixpkgs/config.nix
 fresh ajsalminen/hacker-quotes hacker-quotes.plugin.zsh --file=~/.zshrc --ref=ddb6b46536f65f58714ab8d5be4c52f4df63a734
 fresh --bin ajsalminen/filial filial.scm
+
+# pass-tomb
+fresh-options --ref=3368134898a42c1b758fabac625ec240e125c6be
+  fresh roddhjav/pass-tomb open.bash --bin=~/.pass-extensions/open.bash
+  fresh roddhjav/pass-tomb close.bash --bin=~/.pass-extensions/close.bash
+  fresh roddhjav/pass-tomb tomb.bash --bin=~/.pass-extensions/tomb.bash
+fresh-options
+
+# Local bins.
+fresh bin/kifipass --bin

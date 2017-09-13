@@ -8,6 +8,10 @@ export FZF_CTRL_R_OPTS=-e
 export CHEATPATH="$CHEATPATH:$HOME/.cheat/external"
 export GOPATH=$HOME/projektit/go
 export PATH=$PATH:~/drush/:~/opt/fasd/:~/bin:~/opt/icdiff/:$GOPATH/bin
+
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export PASSWORD_STORE_EXTENSIONS_DIR=~/.pass-extensions
+
 source ~/.fresh/build/shell.sh
 
 
