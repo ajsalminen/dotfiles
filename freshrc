@@ -119,7 +119,6 @@ fresh zsh-users/zsh-syntax-highlighting .  \
 
 fresh-options  --file=~/.zshrc --ref=8c53f998bf6c7e8d6f3e0ab0755ba8b05264344d
   fresh twe4ked/dotfiles shell/zsh/completion.zsh
-  fresh twe4ked/dotfiles shell/zsh/prompt.zsh
 fresh-options
 
 # terminal titles
