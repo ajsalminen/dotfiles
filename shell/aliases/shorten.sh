@@ -37,4 +37,15 @@ alias an="ansible-playbook -D  -i production site.yml --tags=$1 -l $2 --ask-vaul
 # Make a sound for when commands finish.
 export tada='/home/elijah/bin/sounds/TaDa.ogg'
 alias a='paplay $tada'
-alias ifconfig='echo learn to use "ip" instead.'
+
+alias ifconfig='echo learn to use "ip" instead. See "iproute2_cheat".'
+alias netstat='echo learn to use "ss" instead.'
+alias iwconfig='echo learn to use "iw" instead.'
+alias route='echo learn to use "ip r" instead. See "iproute2_cheat".'
+alias arp='echo learn to use "ip n" instead. See "iproute2_cheat".'
+alias iptunnel='echo learn to use "ip tunnel" instead. See "iproute2_cheat".'
+alias nameif='echo learn to use "ip link"/"ifrename" instead. See "iproute2_cheat".'
+
+alias iproute2_cheat='links http://baturin.org/docs/iproute2/'
+alias nettools_cheat='links https://dougvitale.wordpress.com/2011/12/21/deprecated-linux-networking-commands-and-their-replacements/'
+alias ssc='ss -4tanpioe state established'
