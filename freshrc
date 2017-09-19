@@ -227,4 +227,5 @@ fresh-options --ref=3368134898a42c1b758fabac625ec240e125c6be
 fresh-options
 
 # Local bins.
+fresh bin/container-session --bin
 fresh bin/kifipass --bin
