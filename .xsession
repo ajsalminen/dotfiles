@@ -1,6 +1,6 @@
 #!/bin/sh
 [ -r /etc/profile ] && source /etc/profile
-export PATH=$PATH:~/.cabal/bin
+export PATH=$PATH:~/.nix-profile/bin:~/bin
 # This can help with java GUI programs.
 export _JAVA_AWT_WM_NONREPARENTING=1
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/neo2qwerty $DISPLAY
@@ -9,15 +9,14 @@ xmodmap -e "pointer = 3 2 1"
 # fake this to make xdg-open work
 # export DE=gnome
 eval $(gpg-agent --daemon)
+eval $(ssh-agent)
 export EDITOR=emacsclient
 # Without this there will be error messages with git.
 unset GNOME_KEYRING_CONTROL
 trayer --edge top --align right --SetDockType true --expand true --width 10 --transparent true --tint 0x000000 --height 20 & # --SetPartialStrut false
-~/bin/private_startup
-xhost +
-sudo lxc-attach -n fedora-priv -- su anttis -c /home/anttis/bin/container-session
+#~/bin/private_startup
 urxvt &
-nm-applet &
+#nm-applet &
 #terminator -x selfspy &
 keynav &
 
@@ -25,4 +24,7 @@ keynav &
 touchpad=$(xinput | grep "SynPS/2 Synaptics TouchPad" | sed 's/.*id=\([0-9]*\).*/\1/')
 xinput --disable "$touchpad"
 
-~/.cabal/bin/xmonad
+xhost +local:
+urxvt -title container-start -e container-start &
+
+xmonad

@@ -1,8 +1,12 @@
 #!/bin/sh
 
 PATH=$PATH:/home/anttis/.nix-profile/bin:/home/anttis/bin
-DISPLAY=:0
-recollindex -m
+
+if [ -z "$STY" ]; then exec screen -dm -S container_session /bin/sh -c "$0; exec sh"; fi
+
+export DISPLAY=:0
+ 
 emacs --daemon
-emacsclient -nc
-chromium &
+emacsclient -ncd :0
+recollindex -xm
+chromium

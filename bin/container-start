@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ssh-add
+ssh 10.0.42.2 ~/bin/container-session
