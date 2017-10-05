@@ -9,7 +9,6 @@ xmodmap -e "pointer = 3 2 1"
 # fake this to make xdg-open work
 # export DE=gnome
 eval $(gpg-agent --daemon)
-eval $(ssh-agent)
 export EDITOR=emacsclient
 # Without this there will be error messages with git.
 unset GNOME_KEYRING_CONTROL
