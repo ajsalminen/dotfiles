@@ -43,6 +43,9 @@
         python27Packages.upass
         gnupg1
         git
+        screen
+        mplayer
+        nodejs
       ];
     };
   };
