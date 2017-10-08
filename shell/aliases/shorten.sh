@@ -27,6 +27,8 @@ alias howdoi='howdoi --all --num-answers 2'
 alias gic='git difftool --extcmd icdiff -y'
 alias gcd='git difftool --extcmd colordiff -y'
 
+alias mit='mit "Antti J. Salminen"'
+
 # Alias for gitjk
 alias gitjk="history 10 | tac | gitjk_cmd"
 

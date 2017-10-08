@@ -100,6 +100,9 @@ fresh-options --ref=8bdc6878bf3048e878a4f56c82748d94a3700fa3
   fresh simonwhitaker/gibo gibo-completion.zsh --file=~/.zsh/_gibo
 fresh-options
 
+# Minimalist MIT license generator.
+fresh --bin mattmezza/mit-license-generator mit --ref=a4e8c80d92e352fd063561cb39bf01ebb755e2cc
+
 fresh-options --bin --ref=f2fb115b793747b69626a16d2045462d020a5fb0
 fresh ajsalminen/vagrant-peco vagrant-peco
 fresh-options
