@@ -233,3 +233,7 @@ fresh-options
 # Local bins.
 fresh bin/container-session --bin
 fresh bin/kifipass --bin
+
+fresh_after_build () {
+    chmod +x ~/.fresh/build/xsession
+}
