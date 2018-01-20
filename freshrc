@@ -203,6 +203,7 @@ fresh  emacs/ob-ansible --file=~/.emacs.d/ob-ansible/
 fresh ssh://antti@linger.sytes.net/~/repos/dotfiles_private.git .wl --file=~/.wl
 fresh ssh://antti@linger.sytes.net/~/repos/dotfiles_private.git .folders --file=~/.folders
 fresh ssh://antti@linger.sytes.net/~/repos/dotfiles_private.git .ssh/config --file=~/.ssh/config
+fresh ssh://antti@linger.sytes.net/~/repos/dotfiles_private.git private.el --file=~/.emacs.d/private.el
 
 
 # recoll search indexer
