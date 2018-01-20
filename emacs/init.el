@@ -22,7 +22,7 @@
 
 
 (load-user-file "~/.emacs.d/split_config/packages.el")
-(load-user-file "~/.emacs.d/split_config/private.el")
+(load-user-file "~/.emacs.d/private.el")
 
 
 (require 'ansible-runner)
