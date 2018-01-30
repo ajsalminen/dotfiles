@@ -225,7 +225,7 @@ fresh ajsalminen/hacker-quotes hacker-quotes.plugin.zsh --file=~/.zshrc --ref=dd
 fresh --bin ajsalminen/filial filial.scm
 
 # pass-tomb
-fresh-options --ref=3368134898a42c1b758fabac625ec240e125c6be
+fresh-options --ref=11f605cbfcf59e04f9c885fd03d8895239a91b32
   fresh roddhjav/pass-tomb open.bash --bin=~/.pass-extensions/open.bash
   fresh roddhjav/pass-tomb close.bash --bin=~/.pass-extensions/close.bash
   fresh roddhjav/pass-tomb tomb.bash --bin=~/.pass-extensions/tomb.bash
