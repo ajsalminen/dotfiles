@@ -14,7 +14,6 @@
         # apparix
         # nq
         # jq
-        ansible_2_1
         python27Packages.httplib2
         python27Packages.howdoi
         php70
