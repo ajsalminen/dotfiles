@@ -235,6 +235,11 @@ fresh-options
 fresh bin/container-session --bin
 fresh bin/kifipass --bin
 
+fresh  systemd/user --file=~/.config/systemd/user/
+
+
 fresh_after_build () {
     chmod +x ~/.fresh/build/xsession
+    systemctl --user enable backup.service
+    systemctl --user enable backup.timer
 }

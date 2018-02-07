@@ -1,0 +1,8 @@
+[Unit]
+Description=Run backup rsync every day.
+
+[Timer]
+OnCalendar=01:15
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup home directory.
+
+[Service]
+Type=oneshot
+ExecStart=/run/current-system/sw/bin/rsync -avzx --delete /home/anttis/ antti@linger.sytes.net:/home/antti/backups/nostromo-nixos/
+
+[Install]
+WantedBy=default.target
