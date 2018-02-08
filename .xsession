@@ -26,5 +26,6 @@ xinput --disable "$touchpad"
 
 xhost +local:
 urxvt -title container-start -e container-start &
-
+systemctl --user import-environment SSH_AUTH_SOCK # For backup service.
+systemctl --user import-environment PATH # For backup service. A manually set env would probably be better.
 xmonad
