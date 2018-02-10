@@ -7,6 +7,7 @@
       name = "all";
       paths = [
         python
+        ruby
         emacs
 	git
         go
@@ -16,6 +17,7 @@
         # jq
         python27Packages.httplib2
         python27Packages.howdoi
+        python27Packages.pygments_2_0
         php70
         php70Packages.composer
         vagrant
@@ -41,10 +43,16 @@
         file
         python27Packages.upass
         gnupg1
-        git
         screen
         mplayer
         nodejs
+        fd
+        sshfs-fuse
+        openssl
+        icdiff
+        ripgrep
+        nix-index
+        anki
       ];
     };
   };
