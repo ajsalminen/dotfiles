@@ -17,7 +17,8 @@
         # jq
         python27Packages.httplib2
         python27Packages.howdoi
-        python27Packages.pygments_2_0
+        python27Packages.pygments
+        python27Packages.pyyaml
         php70
         php70Packages.composer
         vagrant
@@ -53,6 +54,7 @@
         ripgrep
         nix-index
         anki
+        dmidecode
       ];
     };
   };
