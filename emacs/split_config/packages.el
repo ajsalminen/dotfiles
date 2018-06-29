@@ -67,7 +67,6 @@
         scf-mode ;; shortens directory paths in some buffers
         flycheck
         howdoi
-        help-fns+
         aggressive-indent
         color-identifiers-mode
         gtags ;; remove once https://github.com/arnested/drupal-mode/issues/67 is fixed.
