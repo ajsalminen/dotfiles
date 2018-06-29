@@ -60,7 +60,6 @@
         ansible
         epa
         ;; icicles
-        dired+
         smart-mode-line
         wgrep
         wgrep-ag
