@@ -55,6 +55,7 @@
         nix-index
         anki
         dmidecode
+        unar
       ];
     };
   };
