@@ -55,7 +55,7 @@
         nix-index
         anki
         dmidecode
-        unar
+        p7zip
       ];
     };
   };
