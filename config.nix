@@ -56,6 +56,7 @@
         anki
         dmidecode
         p7zip
+        wxHexEditor
       ];
     };
   };
