@@ -180,11 +180,14 @@ fresh-options --bin --ref=b2f00090c175b61f4a0419a38a00fa23ee794ef1
   fresh 0xAX/git-cheat git-cheat
 fresh-options
 
+
+fresh ajsalminen/cheatsheets . --file=~/.cheat/ # whole repository
+
 # cheat sheets for cheat
-fresh pkrumins/bash-redirections-cheat-sheet bash-redirections-cheat-sheet.txt --file=~/.cheat/external/bash-redirections --ref=6d23d2f5aed6b9b1d806d135aa1a7eb00a8c7290
-fresh pkrumins/bash-history-cheat-sheet bash-history-cheat-sheet.txt --file=~/.cheat/external/bash-history --ref=d27271d56ea9db15e681ee79e521b97d6377123c
-fresh pkrumins/awk-cheat-sheet awk.cheat.sheet.txt --file=~/.cheat/external/awk_table --ref=f0845c9c9493d74d72819e63e57fd7aa747258fc
-fresh pkrumins/sed-cheat-sheet sed.stream.editor.cheat.sheet.txt --file=~/.cheat/external/sed_table --ref=652669838e051920266f363ac882eaadb2e55cfe
+fresh pkrumins/bash-redirections-cheat-sheet bash-redirections-cheat-sheet.txt --file=~/.cheat-external/bash-redirections --ref=6d23d2f5aed6b9b1d806d135aa1a7eb00a8c7290
+fresh pkrumins/bash-history-cheat-sheet bash-history-cheat-sheet.txt --file=~/.cheat-external/bash-history --ref=d27271d56ea9db15e681ee79e521b97d6377123c
+fresh pkrumins/awk-cheat-sheet awk.cheat.sheet.txt --file=~/.cheat-external/awk_table --ref=f0845c9c9493d74d72819e63e57fd7aa747258fc
+fresh pkrumins/sed-cheat-sheet sed.stream.editor.cheat.sheet.txt --file=~/.cheat-external/sed_table --ref=652669838e051920266f363ac882eaadb2e55cfe
 
 # global ignore file for ag.
 fresh .grepignore --file=~/.grepignore

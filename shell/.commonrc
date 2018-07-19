@@ -5,7 +5,7 @@ export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export SURFRAW_text_browser=$(which links)
 export SURFRAW_graphical=no
 export FZF_CTRL_R_OPTS=-e
-export CHEATPATH="$CHEATPATH:$HOME/.cheat/external"
+export CHEATPATH="$CHEATPATH:$HOME/.cheat-external"
 export GOPATH=$HOME/projektit/go
 export PATH=$PATH:~/drush/:~/opt/fasd/:~/bin:~/opt/icdiff/:$GOPATH/bin
 
