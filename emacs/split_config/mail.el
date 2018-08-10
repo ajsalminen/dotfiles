@@ -9,4 +9,6 @@
 (setq mime-play-delete-file-immediately nil)
 
 ;; Threading doesn't bump up threads with new replies so use sequential.
-(setq wl-summary-buffer-view 'sequence)
+(setq wl-summary-default-view 'sequence)
+
+(setq mime-view-multipart/alternative-show-all-children t)
